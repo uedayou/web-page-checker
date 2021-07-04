@@ -1,0 +1,7 @@
+- name: Web site
+  url: https://uedayou.net/
+- name: API server
+  url: https://api-jrslod.uedayou.net/sparql
+  params: 
+    output: json
+    query: "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> select * where{ ?s rdfs:label ?label. } limit 10"

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web page checker</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <v-container class="pt-10 pb-5">
+          <h1 class="text-center py-5">The status of web pages</h1>
+          <v-divider></v-divider>
+          <v-simple-table>
+            <template v-slot:default>
+              <thead>
+                <tr class="text-center">
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    URL
+                  </th>
+                  <th>
+                    Date
+                  </th>
+                  <th>
+                    Status
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="item in status"
+                  :key="item.name"> 
+                  <td>
+                    {{ item.name }}
+                  </td>
+                  <td>
+                    <a :href="item.requestUrl" 
+                       target="_blank" 
+                       rel="noreferrer noopener">
+                      {{ item.url }}
+                    </a>
+                  </td>
+                  <td>
+                    {{ item.updatedAt }}
+                  </td>
+                  <td class="text-center">
+                    <img :src="item.statusImg" width="20" />
+                  </td>
+                </tr>
+              </tbody>
+            </template>
+          </v-simple-table>
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
+
+  <script src="./status.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data () {
+        return {
+          status: data
+        }
+      },
+    })
+  </script>
+</body>
+</html>
