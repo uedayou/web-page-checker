@@ -62,6 +62,12 @@ async function checkUrl(url, params, type) {
 		flag = true;
 	} catch (e) {
 		console.error(e.response ? e.response.status : e.errno);
+		if ( e.response && e.response.status) {
+			if (!isRetry && Math.floor(+e.response.status/100) === 5) {
+				await new Promise(resolve => setTimeout(resolve, 5000));
+				return await checkUrl(url, params, type, true);
+			}
+		}
 	}
 	return flag;
 }
