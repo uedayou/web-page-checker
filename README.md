@@ -1,6 +1,6 @@
 # Web Page Checker
 
-GitHub Action を利用して、登録した Webページ の死活監視を行い、GitHub Pages にその状態を表示できるプログラムです。
+GitHub Action を利用して、登録した Webページ の簡易的な死活監視を行い、GitHub Pages にその状態を表示できるプログラムです。
 
 ## Webページ登録
 
