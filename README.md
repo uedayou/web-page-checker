@@ -76,5 +76,6 @@ GitHub Pagesのデプロイも併せて実行されますが、シークレッ�
 ## GitHub Pages で確認
 
 GitHub Actions により、 `gh-pages`ブランチが作成されます。
-GitHub Pages にアクセスすると、`urllist.yaml` に登録されたWebページの状況が一覧として表示されます。
+GitHub Pages にアクセスすると、`urllist.yaml` に登録されたWebページの状況が以下のように一覧として表示されます。
 
+<https://uedayou.github.io/web-page-checker/>
