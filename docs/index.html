@@ -46,7 +46,7 @@
                     </a>
                   </td>
                   <td>
-                    {{ item.updatedAt }}
+                    {{ new Date(item.updatedAt).toISOString() }}
                   </td>
                   <td class="text-center">
                     <img :src="item.statusImg" width="20" />

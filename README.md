@@ -25,7 +25,7 @@ $ npm i
 $ npm run start
 ```
 
-`docs` ディレクトリに `urllist.yaml` に登録された Webサイトがアクセスできたかを `[name に指定した文字列]/check.svg` で確認できます(アクセス可:`〇`、不可:`×`)。
+`urllist.yaml` に登録された Webサイトへのアクセス可否を `docs/checks/[name に指定した文字列]/check.svg` で確認できます(アクセス可:`〇`、不可:`×`)。
 
 ## GitHub Actions 設定
 
